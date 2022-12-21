@@ -1,0 +1,8 @@
+$color: (
+  "logo": #2196f3,
+  "primary-letter": #212121,
+  "second-letter": #757575,
+);
+@function getcolor($key) {
+  @return map-get($color, $key);
+}

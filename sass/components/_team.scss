@@ -1,0 +1,75 @@
+@import "../utils/variable";
+@import "../utils/mixin";
+
+.section--team {
+  background-color: #f5f4fa;
+}
+.team {
+  &__list {
+    @include display();
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+.person {
+  @include display();
+  flex-direction: column;
+  gap: 10px;
+  width: 270px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  padding-bottom: 30px;
+
+  &__photo {
+    width: 270px;
+    height: 260px;
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    @include style-letter(16px, normal, 1.18, 500);
+    color: getcolor("primary-letter");
+  }
+
+  &__job {
+    @include style-letter(16px, normal, 1.18, 400);
+    color: getcolor("second-letter");
+  }
+}
+
+.social {
+  margin-top: 5px;
+  @include display();
+  width: 100%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  &__item {
+    @include display();
+  }
+
+  &__link{
+    @include display();
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+  }
+
+  &__link:focus,
+  &__link:hover{
+    background-color: getcolor("logo");
+  }
+
+  &__icon{
+    width: 20px;
+    height: 20px;
+    fill:#AFB1B8;
+  }
+  
+  &__link:focus &__icon,
+  &__link:hover &__icon{
+    fill: #FFF;
+  }
+}

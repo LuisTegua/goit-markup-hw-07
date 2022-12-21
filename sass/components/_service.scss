@@ -1,0 +1,19 @@
+@import "../utils/mixin";
+@import "../utils/variable";
+
+.service {
+  @include display();
+  flex-direction: column;
+  row-gap: 30px;
+  height: 600px;
+  background-image: url("../../img/img-service.jpg");
+  background-size: 1600px;
+  background-position: center;
+
+  &__title {
+    @include style-letter(44px, normal, 1.36, 900);
+    text-align: center;
+    width: 500px;
+    color: #fff;
+  }
+}

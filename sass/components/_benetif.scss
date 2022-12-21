@@ -1,0 +1,37 @@
+@import "../utils/mixin";
+@import "../utils/variable";
+
+.benefit {
+  @include display();
+  align-items: flex-start;
+  justify-content: space-evenly;
+  margin-bottom: 94px;
+
+  &__item {
+    width: 270px;
+  }
+
+  &__title {
+    @include style-letter(14px, normal, 1.14, 700);
+    text-transform: uppercase;
+    color: getcolor("primary-letter");
+    margin-top: 30px;
+  }
+
+  &__description {
+    @include style-letter(14px, normal, 1.71, 400);
+    color: getcolor("second-letter");
+    margin-top: 10px;
+  }
+}
+.img {
+    @include display();
+    background-color: #F5F4FA;
+    border-radius: 4px;
+    height: 120px;
+
+    &__icon{
+        width: 70px;
+        height: 70px;
+    }
+}

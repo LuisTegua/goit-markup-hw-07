@@ -1,0 +1,134 @@
+@import "../utils/mixin";
+@import "../utils/variable";
+
+.backdrop {
+  @include display();
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.is-hidden {
+  visibility: hidden;
+}
+.modal {
+  @include display();
+  position: relative;
+  background-color: #fff;
+  padding: 40px 40px;
+  border-radius: 4px;
+
+  &__close {
+    @include display();
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: inherit;
+    cursor: pointer;
+  }
+
+  &__close:focus &__icon,
+  &__close:hover &__icon {
+    fill: getcolor("logo");
+  }
+
+  &__form {
+    @include display();
+    flex-direction: column;
+    width: 448px;
+  }
+
+  &__title {
+    @include style-letter(20px, normal, 1.15, 700);
+    color: getcolor("primary-letter");
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  &__label {
+    @include style-letter(12px, normal, 1.17, 400);
+    color: getcolor("second-letter");
+  }
+  &__btn {
+    display: flex;
+    margin: 20px auto;
+    justify-self: center;
+  }
+}
+.input {
+  @include display();
+  position: relative;
+  width: 100%;
+  margin: 0px auto;
+  &__space {
+    @include style-letter(14px, normal, 1.17, 400);
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    margin-bottom: 5px;
+    padding-left: 35px;
+  }
+  &__space:hover,
+  &__space:focus {
+    outline: getcolor("logo");
+    border-color: getcolor("logo");
+  }
+  &__icon {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    width: 18px;
+    height: 18px;
+  }
+  &:hover &__icon,
+  &:focus &__icon {
+    fill: getcolor("logo");
+  }
+  &__textarea {
+    width: 448px;
+    height: 120px;
+    resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 12px 16px;
+  }
+  &__textarea:hover,
+  &__textarea:focus {
+    outline: getcolor("logo");
+    border-color: getcolor("logo");
+  }
+  &__textarea::placeholder {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+.check {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  &__icon {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0px;
+    top: 12px;
+    z-index: -1;
+  }
+  &__input:checked + &__icon {
+    z-index: 1;
+    background-color: #2196F3;
+    border-radius: 4px;
+  }
+}

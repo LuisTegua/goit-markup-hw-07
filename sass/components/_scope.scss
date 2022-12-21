@@ -1,0 +1,29 @@
+@import "../utils/mixin";
+@import "../utils/variable";
+
+.scope{
+    &__list{
+        @include display();
+        gap: 30px;
+    }
+}
+.doing{
+    position: relative;
+
+    &__img{
+        width: 370px;
+        height: 294px;
+    }
+
+    &__title{
+        @include style-letter(14px,normal,1.14,700);
+        width: 100%;
+        position: absolute;
+        bottom: 4px;
+        padding: 27px 0px;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: rgba(47, 48, 58, 0.8);
+        color: #FFF;
+    }
+}

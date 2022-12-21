@@ -1,0 +1,84 @@
+@import "../utils/mixin";
+@import "../utils/variable";
+
+.footer {
+  width: 100%;
+  background-color: #2f303a;
+
+  &__container {
+    @include display();
+    width: 100%;
+    padding: 70px 15px;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+}
+.address {
+  &__direction {
+    @include style-letter(14px, normal, 1.71, 400);
+    color: #fff;
+  }
+  &__contact {
+    @include style-letter(14px, normal, 1.71, 400);
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+.red-social {
+  &__title {
+    @include style-letter(14px, normal, 1.14, 700);
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    width: 206px;
+  }
+}
+.social {
+  &__link--footer {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  &__icon--footer {
+    fill: #fff;
+  }
+}
+
+.newsletter {
+  &__title {
+    @include style-letter(14px, normal, 1.14, 700);
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+}
+.newsletter-form {
+  @include display();
+
+  &__input {
+    width: 358px;
+    height: 50px;
+    border-radius: 4px;
+    margin-right: 10px;
+    padding-left: 10px;
+    background-color: inherit;
+    border-color: rgba(255, 255, 255, 0.6);
+    color: #FFF;
+  }
+
+  &__input:focus,
+  &__input:hover{
+    outline: #fff;
+    border-color: #FFF;
+  }
+
+  &__input::placeholder {
+    @include style-letter(16px, normal, 1.25, 400);
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+.btn-form {
+  @include display();
+  gap: 20px;
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+}

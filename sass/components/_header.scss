@@ -1,0 +1,50 @@
+@import "../utils/mixin";
+@import "../utils/variable";
+.header {
+  @include display();
+  padding: 25px 15px;
+  border-bottom: 1px solid #ececec;
+}
+.nav {
+  @include display();
+  margin-right: 300px;
+}
+.menu {
+  @include display();
+  column-gap: 62px;
+  margin-left: 92px;
+
+  &__item {
+    position: relative;
+  }
+
+  &__link {
+    color: getcolor("primary-letter");
+    @include style-letter(14px, normal, 1.14, 500);
+  }
+}
+.contact {
+  @include display();
+  gap: 30px;
+
+  &__item {
+    @include display();
+    gap: 10px;
+  }
+  &__item:focus &__icon,
+  &__item:hover &__icon,
+  &__item:focus &__link,
+  &__item:hover &__link {
+    fill: getcolor("logo");
+    color: getcolor("logo");
+  }
+
+  &__icon {
+    fill: getcolor("second-letter");
+  }
+
+  &__link {
+    color: getcolor("second-letter");
+    @include style-letter(14px, normal, 1.14, 500);
+  }
+}
