@@ -3,16 +3,18 @@
 
 .benefit {
   @include display();
+  flex-wrap: wrap;
+  gap: 30px;
   align-items: flex-start;
   justify-content: space-evenly;
-  margin-bottom: 94px;
 
   &__item {
-    width: 270px;
+    width: 100%;
   }
 
   &__title {
     @include style-letter(14px, normal, 1.14, 700);
+    text-align: center;
     text-transform: uppercase;
     color: getcolor("primary-letter");
     margin-top: 30px;

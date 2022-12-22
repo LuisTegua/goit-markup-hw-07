@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/main.min.css" />
+    <!-- <link rel="stylesheet" href="./css/main.min.css" /> -->
     <link rel="stylesheet" href="./sass/main.css" />
     <title>WebStudio</title>
   </head>
@@ -17,9 +17,7 @@
             <a class="link menu__link" href="./index.html">Estudio</a>
           </li>
           <li class="menu__item">
-            <a class="link site menu__link" href="./portafolio.html"
-              >Portafolio</a
-            >
+            <a class="link site menu__link" href="./portafolio.html">Portafolio</a>
           </li>
           <li class="menu__item">
             <a class="link menu__link" href="#">Contactos</a>
@@ -50,6 +48,11 @@
           </a>
         </li>
       </ul>
+      <button class="btn-menu" mobile-menu-open>
+        <svg class="btn-menu__icon">
+          <use href="./img/icons.svg#icon-menu"></use>
+        </svg>
+      </button>
     </header>
     <main>
       <section class="section">
@@ -255,7 +258,7 @@
     </main>
     <footer class="footer">
       <div class="footer__container">
-        <address>
+        <address class="footer-address">
           <a class="link logo" href="">WebStudio</a>
           <ul class="list address">
             <li class="address__item">
@@ -278,35 +281,33 @@
         <div class="red-social">
           <h5 class="red-social__title">encuentrenos en</h5>
           <ul class="list social">
-                <li class="social__item">
-                  <a class="social__link social__link--footer" href="">
-                    <svg class="social__icon social__icon--footer">
-                      <use href="./img/icons.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social__item">
-                  <a class="social__link social__link--footer" href="">
-                    <svg class="social__icon social__icon--footer">
-                      <use href="./img/icons.svg#icon-twitter"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social__item">
-                  <a class="social__link social__link--footer" href="">
-                    <svg class="social__icon social__icon--footer">
-                      <use href="./img/icons.svg#icon-facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social__item ">
-                  <a class="social__link social__link--footer" href="">
-                    <svg class="social__icon social__icon--footer">
-                      <use href="./img/icons.svg#icon-linkedin"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
+            <li class="social__item">
+              <a class="social__link social__link--footer" href="">
+                <svg class="social__icon social__icon--footer">
+                  <use href="./img/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--footer" href="">
+                <svg class="social__icon social__icon--footer">
+                  <use href="./img/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--footer" href="">
+                <svg class="social__icon social__icon--footer">
+                  <use href="./img/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--footer" href="">
+                <svg class="social__icon social__icon--footer">
+                  <use href="./img/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
@@ -329,5 +330,59 @@
         </div>
       </div>
     </footer>
+    <section class="mobile is-hidden" mobile-menu>
+      <div class="mobile-modal">
+        <button class="mobile__close" mobile-menu-close>
+          <svg class="mobile__icon" width="11px" height="11px">
+            <use href="./img/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <nav class="mobile-nav">
+          <ul class="list mobile-menu">
+            <li class="mobile-menu__item">
+              <a class="link mobile-menu__link" href="./index.html">Estudio</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="link mobile-menu__link" href="./portafolio.html"
+                >Portafolio</a
+              >
+            </li>
+            <li class="mobile-menu__item">
+              <a class="link mobile-menu__link" href="#">Contactos</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="list contact-mobile">
+          <li class="contact-mobile__item">
+            <a class="link contact-mobile__tel" href="tel:+525555296000">
+              +525555296000
+            </a>
+          </li>
+          <li class="contact-mobile__item">
+            <a
+              class="link contact-mobile__mail"
+              href="mailto:info@devstudio.com"
+            >
+              info@devstudio.com
+            </a>
+          </li>
+          <li>
+            <ul class="list social--mobile">
+              <li>
+                <a class="link social--mobile__link" href="#">Instagram</a>
+              </li>
+              <li><a class="link social--mobile__link" href="#">Tiwtter</a></li>
+              <li>
+                <a class="link social--mobile__link" href="#">Facebook</a>
+              </li>
+              <li>
+                <a class="link social--mobile__link" href="#">Linkedln</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

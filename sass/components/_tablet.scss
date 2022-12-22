@@ -1,0 +1,22 @@
+@import "../utils/mixin";
+@import "../utils/variable";
+
+@media screen and (min-width: 768px) {
+  .benefit {
+    &__item {
+      width: 354px;
+    }
+  }
+  .person{
+    width: 354px;
+  }
+  .btn-menu{
+    display: none;
+  }
+  .contact{
+    display: block;
+  }
+  .menu{
+    display: flex;
+  }
+}

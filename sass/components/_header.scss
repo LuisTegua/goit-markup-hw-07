@@ -1,19 +1,35 @@
 @import "../utils/mixin";
 @import "../utils/variable";
+
 .header {
   @include display();
-  padding: 25px 15px;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px 15px;
   border-bottom: 1px solid #ececec;
 }
 .nav {
   @include display();
-  margin-right: 300px;
+  // justify-content: space-between;
+}
+.btn-menu {
+  border: none;
+  background-color: inherit;
+
+  &:hover &__icon,
+  &:focus &__icon {
+    fill: getcolor("logo");
+  }
+  &__icon {
+    width: 40px;
+    height: 40px;
+  }
 }
 .menu {
   @include display();
+  display: none;
   column-gap: 62px;
   margin-left: 92px;
-
   &__item {
     position: relative;
   }
@@ -25,8 +41,8 @@
 }
 .contact {
   @include display();
+  display: none;
   gap: 30px;
-
   &__item {
     @include display();
     gap: 10px;
@@ -46,5 +62,67 @@
   &__link {
     color: getcolor("second-letter");
     @include style-letter(14px, normal, 1.14, 500);
+  }
+}
+.mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+
+  &-modal {
+    display: flex;
+    flex-direction: column;
+    gap:302px;
+    position: relative;
+    padding: 50px 40px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background-color: inherit;
+  }
+
+  &__close:hover &__icon,
+  &__close:hover &__icon{
+    fill: getcolor("logo");
+  }
+}
+.mobile-menu{
+  &__link{
+    @include style-letter(40px,normal,1.17,500);
+    margin-bottom: 36px;
+    color: getcolor("primary-letter");
+  }
+  &__link:focus,
+  &__link:hover{
+    color: getcolor("logo");
+  }
+}
+.contact-mobile{
+  &__item{
+    margin-bottom: 30px;
+  }
+  &__tel{
+    @include style-letter(34px,normal,1.17,500);
+    color: getcolor("logo");
+  }
+  &__mail{
+    @include style-letter(24px,normal,1.17,500);
+    color: getcolor("second-letter");
+  }
+}
+.social--mobile{
+  @include display();
+  &__link{
+    @include style-letter(18px,normal,1.2,500);
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    padding: 0px 10px;
+    color: getcolor("logo");
   }
 }

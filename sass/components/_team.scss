@@ -15,7 +15,7 @@
   @include display();
   flex-direction: column;
   gap: 10px;
-  width: 270px;
+  width: 450px;
   background-color: #fff;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -23,8 +23,7 @@
   padding-bottom: 30px;
 
   &__photo {
-    width: 270px;
-    height: 260px;
+    width: 100%;
     margin-bottom: 20px;
   }
 
@@ -43,7 +42,8 @@
   margin-top: 5px;
   @include display();
   width: 100%;
-  justify-content: space-evenly;
+  gap: 10px;
+  // justify-content: space-evenly;
   flex-wrap: wrap;
 
   &__item {

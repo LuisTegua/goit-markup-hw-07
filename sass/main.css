@@ -259,7 +259,7 @@ summary {
   justify-content: center;
   flex-direction: column;
   margin: 0 auto;
-  width: 1200px;
+  min-width: 480px;
   box-shadow: 6px 0px 20px rgba(0, 0, 0, 0.1), -6px 0px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -277,7 +277,7 @@ summary {
 .site::after {
   position: absolute;
   display: block;
-  bottom: -32px;
+  bottom: -28px;
   content: "";
   width: 100%;
   height: 4px;
@@ -329,7 +329,9 @@ summary {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 25px 15px;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px 15px;
   border-bottom: 1px solid #ececec;
 }
 
@@ -337,13 +339,25 @@ summary {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 300px;
+}
+
+.btn-menu {
+  border: none;
+  background-color: inherit;
+}
+.btn-menu:hover .btn-menu__icon, .btn-menu:focus .btn-menu__icon {
+  fill: #2196f3;
+}
+.btn-menu__icon {
+  width: 40px;
+  height: 40px;
 }
 
 .menu {
   display: flex;
   align-items: center;
   justify-content: center;
+  display: none;
   -moz-column-gap: 62px;
        column-gap: 62px;
   margin-left: 92px;
@@ -363,6 +377,7 @@ summary {
   display: flex;
   align-items: center;
   justify-content: center;
+  display: none;
   gap: 30px;
 }
 .contact__item {
@@ -386,23 +401,95 @@ summary {
   font-weight: 500;
 }
 
+.mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+.mobile-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 302px;
+  position: relative;
+  padding: 50px 40px;
+}
+.mobile__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background-color: inherit;
+}
+.mobile__close:hover .mobile__icon, .mobile__close:hover .mobile__icon {
+  fill: #2196f3;
+}
+
+.mobile-menu__link {
+  font-size: 40px;
+  font-style: normal;
+  line-height: 1.17;
+  font-weight: 500;
+  margin-bottom: 36px;
+  color: #212121;
+}
+.mobile-menu__link:focus, .mobile-menu__link:hover {
+  color: #2196f3;
+}
+
+.contact-mobile__item {
+  margin-bottom: 30px;
+}
+.contact-mobile__tel {
+  font-size: 34px;
+  font-style: normal;
+  line-height: 1.17;
+  font-weight: 500;
+  color: #2196f3;
+}
+.contact-mobile__mail {
+  font-size: 24px;
+  font-style: normal;
+  line-height: 1.17;
+  font-weight: 500;
+  color: #757575;
+}
+
+.social--mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social--mobile__link {
+  font-size: 18px;
+  font-style: normal;
+  line-height: 1.2;
+  font-weight: 500;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding: 0px 10px;
+  color: #2196f3;
+}
+
 .service {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   row-gap: 30px;
-  height: 600px;
-  background-size: 1600px;
+  height: 400px;
+  background-size: 100%;
   background-position: center;
 }
 .service__title {
-  font-size: 44px;
+  font-size: 26px;
   font-style: normal;
   line-height: 1.36;
   font-weight: 900;
   text-align: center;
-  width: 500px;
+  text-transform: uppercase;
+  width: 300px;
   color: #fff;
 }
 
@@ -410,18 +497,20 @@ summary {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
   align-items: flex-start;
   justify-content: space-evenly;
-  margin-bottom: 94px;
 }
 .benefit__item {
-  width: 270px;
+  width: 100%;
 }
 .benefit__title {
   font-size: 14px;
   font-style: normal;
   line-height: 1.14;
   font-weight: 700;
+  text-align: center;
   text-transform: uppercase;
   color: #212121;
   margin-top: 30px;
@@ -448,6 +537,9 @@ summary {
   height: 70px;
 }
 
+.scope {
+  display: none;
+}
 .scope__list {
   display: flex;
   align-items: center;
@@ -457,9 +549,10 @@ summary {
 
 .doing {
   position: relative;
+  width: 370px;
 }
 .doing__img {
-  width: 370px;
+  width: 100%;
   height: 294px;
 }
 .doing__title {
@@ -495,15 +588,14 @@ summary {
   justify-content: center;
   flex-direction: column;
   gap: 10px;
-  width: 270px;
+  width: 450px;
   background-color: #fff;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   padding-bottom: 30px;
 }
 .person__photo {
-  width: 270px;
-  height: 260px;
+  width: 100%;
   margin-bottom: 20px;
 }
 .person__name {
@@ -527,7 +619,7 @@ summary {
   align-items: center;
   justify-content: center;
   width: 100%;
-  justify-content: space-evenly;
+  gap: 10px;
   flex-wrap: wrap;
 }
 .social__item {
@@ -586,17 +678,35 @@ summary {
 .footer {
   width: 100%;
   background-color: #2f303a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-address {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
 }
 .footer__container {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
   width: 100%;
   padding: 70px 15px;
   justify-content: space-evenly;
   align-items: flex-start;
 }
 
+.address {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 .address__direction {
   font-size: 14px;
   font-style: normal;
@@ -621,6 +731,7 @@ summary {
   text-transform: uppercase;
   margin-bottom: 15px;
   width: 206px;
+  text-align: center;
 }
 
 .social__link--footer {
@@ -630,6 +741,12 @@ summary {
   fill: #fff;
 }
 
+.newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 .newsletter__title {
   font-size: 14px;
   font-style: normal;
@@ -644,20 +761,22 @@ summary {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
 }
 .newsletter-form__input {
-  width: 358px;
+  width: 100%;
   height: 50px;
   border-radius: 4px;
   margin-right: 10px;
   padding-left: 10px;
   background-color: inherit;
   border-color: rgba(255, 255, 255, 0.6);
-  color: #FFF;
+  color: #fff;
 }
 .newsletter-form__input:focus, .newsletter-form__input:hover {
   outline: #fff;
-  border-color: #FFF;
+  border-color: #fff;
 }
 .newsletter-form__input::-moz-placeholder {
   font-size: 16px;
@@ -682,6 +801,7 @@ summary {
 }
 
 .btn-form {
+  margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -712,6 +832,7 @@ summary {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 450px;
   position: relative;
   background-color: #fff;
   padding: 40px 40px;
@@ -739,7 +860,7 @@ summary {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 448px;
+  width: 100%;
 }
 .modal__title {
   font-size: 20px;
@@ -853,10 +974,15 @@ summary {
   border-radius: 4px;
 }
 
+.service-form {
+  width: 100%;
+}
+
 .filter {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 50px;
 }
@@ -929,4 +1055,52 @@ summary {
   font-weight: 400;
   margin-left: 24px;
   color: #757575;
+}
+
+@media screen and (min-width: 768px) {
+  .benefit__item {
+    width: 354px;
+  }
+  .person {
+    width: 354px;
+  }
+  .btn-menu {
+    display: none;
+  }
+  .contact {
+    display: block;
+  }
+  .menu {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .body {
+    width: 1200px;
+  }
+  .benefit__item {
+    width: 270px;
+  }
+  .person {
+    width: 270px;
+  }
+  .contact {
+    display: flex;
+  }
+  .scope {
+    display: block;
+  }
+  .newsletter {
+    width: 500px;
+  }
+  .newsletter-form__input {
+    width: 300px;
+  }
+  .btn-form {
+    margin: 0;
+  }
+  .footer-address,
+.address {
+    align-items: flex-start;
+  }
 }/*# sourceMappingURL=main.css.map */

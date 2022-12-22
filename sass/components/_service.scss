@@ -5,15 +5,15 @@
   @include display();
   flex-direction: column;
   row-gap: 30px;
-  height: 600px;
-  // background-image: url("../../img/img-service.jpg");
-  background-size: 1600px;
+  height: 400px;
+  background-size: 100%;
   background-position: center;
 
   &__title {
-    @include style-letter(44px, normal, 1.36, 900);
+    @include style-letter(26px, normal, 1.36, 900);
     text-align: center;
-    width: 500px;
+    text-transform: uppercase;
+    width: 300px;
     color: #fff;
   }
 }

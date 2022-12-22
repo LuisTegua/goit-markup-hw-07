@@ -2,16 +2,18 @@
 @import "../utils/variable";
 
 .scope{
+    display: none;
     &__list{
         @include display();
         gap: 30px;
     }
+
 }
 .doing{
     position: relative;
-
+    width: 370px;
     &__img{
-        width: 370px;
+        width: 100%;
         height: 294px;
     }
 

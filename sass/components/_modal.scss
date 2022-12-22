@@ -15,6 +15,7 @@
 }
 .modal {
   @include display();
+  width: 450px;
   position: relative;
   background-color: #fff;
   padding: 40px 40px;
@@ -41,7 +42,7 @@
   &__form {
     @include display();
     flex-direction: column;
-    width: 448px;
+    width: 100%;
   }
 
   &__title {
@@ -131,4 +132,7 @@
     background-color: #2196F3;
     border-radius: 4px;
   }
+}
+.service-form{
+  width: 100%;
 }
