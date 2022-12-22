@@ -16,23 +16,26 @@
   .contact {
     display: flex;
   }
-  .scope{
+  .scope {
     display: block;
   }
-  .newsletter{
+  .newsletter {
     width: 500px;
-    &-form__input{
-        width: 300px;
+    &-form__input {
+      width: 300px;
     }
   }
-  .btn-form{
+  .btn-form {
     margin: 0;
   }
   .footer-address,
-  .address{
+  .address {
     align-items: flex-start;
   }
-  .grid__item{
+  .grid__item {
     width: 370px;
+  }
+  .service {
+    height: 600px;
   }
 }
