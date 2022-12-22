@@ -6,8 +6,6 @@
   flex-direction: column;
   row-gap: 30px;
   height: 400px;
-  background-size: 100%;
-  background-position: center;
 
   &__title {
     @include style-letter(26px, normal, 1.36, 900);

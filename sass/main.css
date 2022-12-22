@@ -250,6 +250,9 @@ summary {
 .service {
   background-color: #2F303A;
   background-image: url("../img/img-service.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .body {
@@ -479,8 +482,6 @@ summary {
   flex-direction: column;
   row-gap: 30px;
   height: 400px;
-  background-size: 100%;
-  background-position: center;
 }
 .service__title {
   font-size: 26px;
