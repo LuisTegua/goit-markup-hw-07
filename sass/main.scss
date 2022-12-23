@@ -9,12 +9,17 @@
   margin: 0;
   padding: 0;
 }
-.service{
-  background-color: #2F303A;
+.service {
+  background-color: #2f303a;
   background-image: url("../img/img-service.jpg");
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
   background-position: center;
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 162dpi),(min-resolution: 2dppx) {
+  .service {
+    background-image: url("../img/img-service@2x.jpg");
+  }
 }
 .body {
   font-family: "Roboto", "Times New Roman", sans-serif;

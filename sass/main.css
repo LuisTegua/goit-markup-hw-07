@@ -248,13 +248,18 @@ summary {
 }
 
 .service {
-  background-color: #2F303A;
+  background-color: #2f303a;
   background-image: url("../img/img-service.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 1.6875), (min-resolution: 162dpi), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .service {
+    background-image: url("../img/img-service@2x.jpg");
+  }
+}
 .body {
   font-family: "Roboto", "Times New Roman", sans-serif;
   display: flex;
