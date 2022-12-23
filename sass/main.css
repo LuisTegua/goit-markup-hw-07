@@ -255,7 +255,7 @@ summary {
   background-position: center;
 }
 
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 1.6875), (min-resolution: 162dpi), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+@media screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 1.6875), (min-resolution: 162dpi), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .service {
     background-image: url("../img/img-service@2x.jpg");
   }
@@ -1117,5 +1117,6 @@ summary {
   }
   .service {
     height: 600px;
+    background-image: url("../../img/img-service@2x.jpg");
   }
 }/*# sourceMappingURL=main.css.map */
